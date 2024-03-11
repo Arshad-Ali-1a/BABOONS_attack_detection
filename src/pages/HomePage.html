@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewip" content="width=device-width, initial-scale=1.0">
+    <title>Baboons</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <script src="./script.js" defer></script>
+    <script src="./utils.js" defer></script>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <div class="navbar-container">
+        <div class="logo-container">
+            <img src="../assets/logo.png" class="logo" alt="logo">
+            <h2>Baboons</h2>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li id = "home" class="active-tab" onclick="changeTab('home')">Home</li>
+                <li id = "file" onclick="changeTab('file')">File Analysis</li>
+                <li id = "shield" onclick="changeTab('shield')">Shield</li>
+                <li id = "attacks" onclick="changeTab('attacks')">Attacks</li>
+                <img src="../assets/bell.png" style="height: 32px;margin-top: -5px;cursor: pointer;" alt="notification">
+            </ul>
+        </nav>
+    </div>
+
+    <!-- AlertBox -->
+    <div id="alertBox" class="alert-box" style="display: none;">
+
+    </div>
+
+    <!-- home page -->
+    <div id = "home-tab" class="home-page">
+        <div class="main-content">
+            <h1>What we do?</h1>
+            <p>           
+                Baboons Shield, our state-of-the-art application, stands as an impenetrable fortress against the relentless tide of zero-day attacks. Leveraging advanced machine learning algorithms, it operates seamlessly with native OS blocking technologies, ensuring real-time detection and swift mitigation of emerging threats. Meticulously filtering DNS traffic, Baboons Shield acts as a vigilant guardian, proactively identifying and neutralizing potential risks before they can infiltrate your network. With 24/7 monitoring, the application provides continuous protection, adapting to the ever-evolving landscape of cyber threats. Its user-friendly interface guarantees easy navigation and management of cybersecurity settings, while the comprehensive defense mechanism offers peace of mind, allowing you to focus on your work with confidence in the fortified security provided by Baboons Shield.
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Zero-day_(computing)" target="_blank">
+                <button>More Info</button>
+            </a>
+        </div>
+        <img src="../assets/home-page.png" alt="what-we-do">
+    </div>
+
+    <!-- file analysis -->
+    <script src="file_tab.js" defer ></script>
+    <div id = "file-tab" class="file-analysis" style="display: none;">
+        <div class="upload-content">
+            <p class="upload-instruction">Upload log files collected by Cicflowmeter or Baboons</p>
+
+            <div class="file-upload-box" id="fileUploadBox">
+                <img src="../assets/upload.png" alt="upload-icon" class="upload-icon">
+                <div class="loader">
+                    <div>
+                      <ul>
+                        <li>
+                          <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                          </svg>
+                        </li>
+                        <li>
+                          <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                          </svg>
+                        </li>
+                        <li>
+                          <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                          </svg>
+                        </li>
+                        <li>
+                          <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                          </svg>
+                        </li>
+                        <li>
+                          <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                          </svg>
+                        </li>
+                        <li>
+                          <svg fill="currentColor" viewBox="0 0 90 120">
+                            <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div><span>Loading...</span>
+                </div>
+                <p class="upload-info-message">Upload / Drag and drop the files</p>
+                <input type="file" id="fileInput" style="display: none;" accept=".csv">
+            </div>
+            <p class="error-msg" id="upload-error-message" style="display: none;">*Invalid File</p>
+            
+            <p class="upload-result-message" style="display: none;">Processing...</p>
+            
+            <div class="result-box" style="display: none;">
+                <p id="result-file-name">file_name.json</p>
+                <img id="img-open-file" src="../assets/open.png" alt="">
+            </div>
+
+            <p class="analysis-result-message" style="display: none;">Access the results from the CSV file above.</p>
+        </div>
+        <img src="../assets/file-analysis.png" alt="">
+    </div>
+
+    <!-- shield -->
+    <script src="shield_tab.js" defer ></script>
+    <script src="./shield_utils.js" defer></script>
+    <div id = "shield-tab" class="shield" style="display: none;">
+
+        <div class="real-time-content">
+            <div class="real-time-options">
+                <div id="nav-interface" onclick="changeComponent('interface')">
+                    <img class = "stats-img"  src="../assets/network-interface-card.png" alt="">
+                    <p>Select Interface</p> 
+                </div>
+                <div id="nav-stats" onclick="changeComponent('stats')">
+                    <img class = "stats-img"  src="../assets/bars.png" alt="">
+                    <p>View Analytics</p> 
+                </div>
+                <div id="nav-blocks" onclick="changeComponent('blocks')">
+                    <img class = "stats-img"  src="../assets/usb.png" alt="">
+                    <p>View Blocked IPs</p> 
+                </div>
+            </div>
+
+            <!-- interface -->
+            <div id = "comp-interface" class="container" >
+                <div class = "input-container">
+                    <input id = "interface-input" placeholder="Enter Interface" type="text">
+                    <button onclick="setInterface()">Select</button>
+                </div>
+                <ol class = "interface-instructions">
+                    <li>Open command prompt.</li>
+                    <li>Run the command `<b>netsh interface ipv4 show interfaces</b>`.</li>
+                    <li>Copy the interface name you are using and paste it in the above input field.</li>
+                </ol>
+            </div>
+        
+            <!-- Statistics -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <div id = "comp-stats" class="container" style="display: none;">
+                <canvas id="myChart"></canvas>
+            </div>
+    
+            <!-- blocked ports -->
+            <div id = "comp-blocks" class="container" style="display: none;">
+                <div id = "block-ips-body" class="block-ips-body">
+                </div>
+            </div>
+        </div>
+
+        <div class = "shield-toggler" id="main-shield">
+            <div id = "shield-toggle-section" class = "sheild-toggle-section red">
+                <img id = "shield-image" src="../assets/alert.png" alt=""> 
+                <div onclick="toggleShield()" id = "shield-toggle" class="toggle off">
+                    <div class="toggle-handle"></div>
+                </div>
+            </div>
+            <div class = "sheild-text">
+                <h1 class="shield-status" id = "shield-status-heading">Shield is Disabled</h1>
+                <p id = "shield-status-caption"> Click on the toggle button to activate it.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- attacks -->
+    <script src="attacks_tab.js" defer></script>
+    <div id = "attacks-tab" class="attacks" style="display: none;">
+        <div class="attacks-content">
+
+            <div class="search-bar">
+                <input type="text" placeholder="IP Address">
+                <img src="../assets/Search.png" alt="">
+            </div>
+
+            <div class = "history-container">
+                <h2>Detected Attacks</h2>
+                <div class = "sub-history">
+                    <div class="attacks-sidebar" id = "attacks-sidebar">
+                        
+                    </div>
+    
+                    <div class="attack-details" id = "attack-details">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="../assets/attacks-asset.png" alt="">
+    </div>
+    
+</body>
+
+</html>

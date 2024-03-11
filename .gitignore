@@ -1,0 +1,4 @@
+ignored.txt
+backend/models
+node_modules
+backend/cicflowmeter_log_collection_tool/__pycache__
